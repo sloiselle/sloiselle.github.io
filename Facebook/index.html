@@ -1,0 +1,440 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Facebook</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico"/>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <nav>
+            <div class="main">
+                <i id="logo" class="navButton fa fa-facebook-square"></i>
+                <input id="search" placeholder="Search Facebook"></input>
+                <div id="searchButton">
+                    <i class="fa fa-search fa-1"></i>               
+                </div>
+                <div class= "navButton">
+                    <img src="img/profilePic.jpg"/>
+                    <p>Scott</p>
+                </div>
+                <div class= "navButton" id="homeButton">
+                    <p>Home</p>
+                </div>
+                <div class="otherNavButtons">
+                    <i class="fa fa-users fa-8"></i>
+                    <i class="fa fa-comments fa-2"></i>
+                    <i class="fa fa-globe fa-2"></i>
+                </div>
+                <div class="rightNavButtons">
+                    <i class="fa fa-lock"></i>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+            </div>
+        </nav>
+        <div class="mainContent">
+            <div id="leftSideBar">
+                <ul>
+                    <li><i class="settings fa fa-cog"></i><img src="img/profilePic.jpg"/>Scott Loiselle</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/2.png"/>Edit Profile</li>
+                </ul>
+                <ul>FAVORITES
+                    <li id="newsFeed"><i class="settings fa fa-cog"></i><img src="img/leftButtons/3.png"/>News Feed<i class="fa fa-caret-down"></i></li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/4.png"/>Messages</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/5.png"/>Events</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/6.png"/>Photos</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/7.png"/>Words With Friends</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/8.png"/>Sale Groups</li>
+                </ul>
+                <ul>PAGES
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/9.png"/>MGM Properties, Inc.</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/10.png"/>Pages Feed</li>
+                    <li><img src="img/leftButtons/11.png"/>Like Pages</li>
+                    <li><img src="img/leftButtons/12.png"/>Create Ad</li>
+                    <li><img src="img/leftButtons/13.png"/>Create Page</li>
+                </ul>
+                <ul>APPS
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/14.png"/>Games</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/15.png"/>Candy Crush Saga</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/16.png"/>Trivia Crack</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/17.png"/>Games Feed</li>
+                </ul>
+                <ul>GROUPS
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/18.png"/>Funko Trading</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/19.png"/>Leominster</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/20.png"/>New Groups</li>
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/21.png"/>Create Group</li>
+                </ul>
+                <ul>FRIENDS
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/22.png"/>Leominster High</li>
+                </ul>
+                <ul>INTERESTS
+                    <li><i class="settings fa fa-cog"></i><img src="img/leftButtons/23.png"/>Public Figures</li>
+                </ul>
+                <ul>EVENTS
+                    <li><img src="img/leftButtons/24.png"/>Jon's Graduating!</li>
+                    <li><img src="img/leftButtons/25.png"/>Create Event</li>
+                </ul>
+            </div>
+            <div id="feed">
+                <article id="post">
+                    <ul>
+                        <li><img src="img/leftButtons/2.png"/>Update Status</li>
+                        <li><img src="img/leftButtons/26.png"/>Add Photos/Video</li>
+                        <li><img src="img/leftButtons/27.png"/>Create Photo Album</li>
+                    </ul>
+                    <img id= "postPic" src="img/profilePic.jpg"/>
+                    <input id="postMessage" placeholder="What's on your mind?"></input>
+                    <div id="postButtons">
+                        <div class="hiddenButton">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <div class="hiddenButton">
+                            <i class="fa fa-user-plus"></i>
+                        </div>
+                        <div class="hiddenButton">
+                            <i class="fa fa-smile-o"></i>
+                        </div>
+                        <div class="hiddenButton">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <div class="button" id="privacyButton">
+                            <i class="fa fa-globe fa-2"></i>
+                            <p>Public<p>
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="button" id="postButton">
+                            <p>Post<p>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="postHeader">
+                        <img class="profilePic" src="img/wolvpic.png"/>
+                        <div class="uts">
+                            <p class="username">Logan</p>
+                            <p class="timestamp">1 hr</p>
+                        </div>
+                        <i class="postCaret fa fa-angle-down"></i>
+                    </div>
+                    <div class="postText">
+                        <p>SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! SNIKT! </p>
+                    </div>
+                    <div class="postMedia"></div>
+                    <div class="lcsButtons">
+                        <div>
+                            <i class="fa fa-thumbs-up"></i>
+                            <a href="#">Like</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment"></i>
+                            <a href="#">Comment</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-share"></i>
+                            <a href="#">Share</a>
+                        </div>
+                    </div>
+                    <div class="postComments">
+                        <div class="comment">
+                            <img class="commentPic" src="img/profilePic.jpg"/>
+                            <input class="commentBox" placeholder="Write a comment..."></input>
+                            <a href="#"><i class="fa fa-camera"></i></a>
+                            <a href="#"><i class="commentEnd fa fa-smile-o"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="postHeader">
+                        <img class="profilePic" src="img/peterPic.jpg"/>
+                        <div class="uts">
+                            <p class="username">Peter Parker</p>
+                            <p class="timestamp">7:13 PM yesterday</p>
+                        </div>
+                        <i class="postCaret fa fa-angle-down"></i>
+                    </div>
+                    <div class="postMedia">
+                        <img src="img/spidermanSuit.jpg"/>
+                    </div>
+                    <div class="postText">
+                        <p>Should I wear red or black tonight? With great costumes comes great responsibility (and stress)!!!</p>
+                    </div>
+                    <div class="postMedia"></div>
+                    <div class="lcsButtons">
+                        <div>
+                            <i class="fa fa-thumbs-up"></i>
+                            <a href="#">Like</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment"></i>
+                            <a href="#">Comment</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-share"></i>
+                            <a href="#">Share</a>
+                        </div>
+                    </div>
+                    <div class="postComments">
+                        <div class="comment">
+                            <img class="commentPic" src="img/profilePic.jpg"/>
+                            <input class="commentBox" placeholder="Write a comment..."></input>
+                            <a href="#"><i class="fa fa-camera"></i></a>
+                            <a href="#"><i class="commentEnd fa fa-smile-o"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="postHeader">
+                        <img class="profilePic" src="img/marioPic.png"/>
+                        <div class="uts">
+                            <p class="username">Super Mario</p>
+                            <p class="timestamp">5:28 PM Thursday</p>
+                        </div>
+                        <i class="postCaret fa fa-angle-down"></i>
+                    </div>
+                    <div class="postMedia">
+                        <img src="img/marioPizza.jpg"/>
+                    </div>
+                    <div class="postText">
+                        <p>It'sa my pizza! With extra mushrooms!!!</p>
+                    </div>
+                    <div class="lcsButtons">
+                        <div>
+                            <i class="fa fa-thumbs-up"></i>
+                            <a href="#">Like</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-comment"></i>
+                            <a href="#">Comment</a>
+                        </div>
+                        <div>
+                            <i class="fa fa-share"></i>
+                            <a href="#">Share</a>
+                        </div>
+                    </div>
+                    <div class="postComments">
+                        <div class="comment">
+                            <img class="commentPic" src="img/profilePic.jpg"/>
+                            <input class="commentBox" placeholder="Write a comment..."></input>
+                            <a href="#"><i class="fa fa-camera"></i></a>
+                            <a href="#"><i class="commentEnd fa fa-smile-o"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div id="rightSideBar">
+                <article>
+                    <div id="calendar">
+                        <img src="img/leftButtons/5.png"/><p class="blueText">2 event invites</p>
+                    </div>
+                    <div id="trending">
+                        <p class="rightheader">TRENDING</p>
+                        <i class="firstTrend fa fa-line-chart"></i>
+                        <i class="fa fa-rebel"></i>
+                        <i class="fa fa-flask"></i>
+                        <i class="fa fa-futbol-o"></i>
+                        <i class="fa fa-video-camera"></i>
+                    </div>
+                    <div id="games">
+                        <p class="rightheader">GAMES</p>
+                        <i class="firstTrend fa fa-line-chart"></i>
+                        <i class="fa fa-rebel"></i>
+                        <i class="fa fa-flask"></i>
+                        <i class="fa fa-futbol-o"></i>
+                        <i class="fa fa-video-camera"></i>
+                    </div>
+                    <div id="sponsored">
+                        <p class="rightheader">SPONSORED</p>
+                        <a href="#" class="blueText" id="createAd">Create Ad</a>
+                        <img src="img/tgad.jpg" class="ad"/>
+                        <a href="#" class="blueText adHeader">ThinkGeek.com</a>
+                        <p class="adText">ThinkGeek creates unique products that stimulate the imagination. Shop for apparel, home and office, gadgets, collectibles, and more. Free shipping available!</p>
+                    </div>
+                    <div id="groups">
+                        <p class="rightheader">SUGGESTED GROUPS</p>
+                            <img src="img/funko.jpg" class="groupPic"/>
+                            <div>
+                                <a href="#" class="blueText groupHeader">Funko pop Hunting</a>
+                                <p class="groupText">553 members</p>
+                                <div class="joinButton">+ Join</div>
+                            </div>
+                    </div>
+                </article>
+                <article>
+                    <div id="languages">
+                        <div>
+                            <a class="language">English (US)</a>
+                            <p>&#x2022;</p>
+                            <a class="language">Espa&#241;ol</a>
+                            <p>&#x2022;</p>
+                            <a class="language">Fran&#xe7;ais (France)</a>
+                            <p>&#x2022;</p>
+                            <a class="language">Portugu&#xea;s (Brasil)</a>
+                            <p>&#x2022;</p>
+                            <a class="language">Italiano</a>
+                            <p>&#x2022;</p>
+                            <a class="language">Deutsch</a>
+                        </div>
+                        <div id="plusButton">+</div>
+                    </div>
+                </article>
+                <div id="rightLinks">
+                    <a href="#">Privacy</a>
+                    <p>&#x2022;</p>
+                    <a href="#">Terms</a>
+                    <p>&#x2022;</p>
+                    <a href="#">Cookies</a>
+                    <p>&#x2022;</p>
+                    <a href="#">Advertising</a>
+                    <p>&#x2022;</p>
+                    <a href="#">Ad Choices</a>
+                    <p>&#x2022;</p>
+                    <a href="#">More</a>
+                    <i class="fa fa-caret-right" id="rightCaret"></i>
+                </div>
+                <p>Facebook &#xa9; 2016</p>
+            </div>
+        </div>
+            <div id="chat">
+                <div id="yourGames">
+                    <div class=gamesTitle>
+                        <p class="chatGames">YOUR GAMES</p>
+                        <p class="chatGames chatMore">MORE</p>
+                    </div>
+                    <div class="gamesIcons">
+                        <img src="img/spiderGame.jpg">
+                        <img src="img/scrabbleGame.png">
+                        <img src="img/dkGame.jpg">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div id="RecGames">
+                    <div class=gamesTitle>
+                        <p class="chatGames">RECOMMENDED GAMES</p>
+                        <p class="chatGames chatMore">MORE</p>
+                    </div>
+                    <div class="gamesIcons">
+                        <i class="fa fa-angle-left"></i>
+                        <img src="img/carebearGame.jpg">
+                        <img src="img/hkGame.jpg">
+                        <img src="img/mlpGame.png">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+                <div id="chatFriends">
+                    <div class="friend">
+                        <img class="friendPic" src="img/kfpFriend.png"/>
+                        <p class="friendName">Po - Kung Fu Panda</p>
+                        <p class="friendStatus">4h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/shrek1.jpg"/>
+                        <p class="friendName">Shrek</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/hhFriend.jpg"/>
+                        <p class="friendName">Hulk Hogan</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/beaker.jpg"/>
+                        <p class="friendName">Beaker</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/bunsen.jpg-c200"/>
+                        <p class="friendName">Dr. Bunsen Honeydew III</p>
+                        <p class="friendStatus">1h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/cartman.jpg"/>
+                        <p class="friendName">Eric Cartman</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/vader.jpg"/>
+                        <p class="friendName">Darth Vader</p>
+                        <p class="friendStatus">4h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/martin.jpg"/>
+                        <p class="friendName">Martin Contreras</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/jb.jpg"/>
+                        <p class="friendName">JB 'Jables' Barracato</p>
+                        <p class="friendStatus">10h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/leon.jpeg"/>
+                        <p class="friendName">Leon 'Guy-Up-Front' Noel</p>
+                        <p class="friendStatus">15m</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/liono.jpg"/>
+                        <p class="friendName">Liono McThundercat</p>
+                        <p class="friendStatus">18h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/superman.jpg"/>
+                        <p class="friendName">Superman</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/Batman.jpg"/>
+                        <p class="friendName">Batman</p>
+                        <p class="friendStatus">16m</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/TheRock.png"/>
+                        <p class="friendName">Dwayne 'The Rock' Johnson</p>
+                        <p class="friendStatus">15m</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/bill.jpeg"/>
+                        <p class="friendName">Bill Clinton</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/james.jpg"/>
+                        <p class="friendName">James Hetfield</p>
+                        <p class="friendStatus">4d</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/tut.jpg"/>
+                        <p class="friendName">King Tutankhamun</p>
+                        <p class="friendStatus">10h</p>
+                    </div>
+                    <div class="friend">
+                        <img class="friendPic" src="img/suzanne.jpg"/>
+                        <p class="friendName">Suzanne Reyes</p>
+                        <p class="friendStatus greenDot">&#x2022;</p>
+                    </div>
+                </div>
+                <div id="chatSearch">
+                    <i class="fa fa-search fa-1"></i>
+                    <input placeholder="Search"></input>
+                    <i class="fa fa-cog"></i>
+                    <i class="fa fa-pencil-square-o"></i>  
+                </div>
+            </div>
+    </body>
+</html>

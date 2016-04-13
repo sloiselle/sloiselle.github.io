@@ -1,0 +1,1072 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+nav{
+    height: 42px;
+    background: #43609c;
+    border-bottom: 1px #1a316b solid;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    margin: 0 auto;
+}
+
+
+body{
+    background: #e9eaed;
+    line-height: 1.75;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    width: 965px;
+    top: 0;
+    height: 42px;
+    padding-right: 200px;
+    margin: 0 auto;
+}
+
+#logo{
+    font-size: 26px;
+    color: white;
+    margin-left: 0px;
+}
+#search{
+    width: 41.666%;
+    height: 22px;
+    margin-left: 8px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 0;
+    font-family: Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 7px;
+    outline: none;
+}
+
+#search:active + #searchButton,#search:focus + #searchButton{
+    background-color: #5890ff;
+}
+
+#search:active + #searchButton i,#search:focus + #searchButton i{
+    color: #fff;
+}
+
+#searchButton{
+    font-family: 'FontAwesome';
+    height: 24px;
+    width: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f6f7f8;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+#searchButton i{
+    color: #666e7b;
+}
+
+.navButton{
+    margin-left: 180px;
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#homeButton{
+    margin-left: 0px;
+    width: auto;
+    height: auto;
+    border-right: none;
+    border-left: 1px #3c568d solid;
+}
+
+.navButton:hover{
+    background: #3a548c;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.navButton p{
+    color: #fff;
+    font-family: Helvetica;
+    text-shadow: #000 0px -1px;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 6px 10px;
+}
+
+.navButton img{
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+}
+
+
+
+.otherNavButtons, .rightNavButtons{
+    color: #23355b;
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+
+}
+
+.otherNavButtons i, .rightNavButtons i{
+    margin: 0px 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rightNavButtons i{
+    font-size: 16px;
+}
+
+.otherNavButtons i:hover, .rightNavButtons i:hover{
+    color: #06090f;
+}
+
+.rightNavButtons{
+    border-left: 1px #3c568d solid;
+    margin-left: 0px;
+}
+
+.mainContent{
+    width: 965px;
+    margin: 0 auto;
+    z-index: -1;
+    padding-top: 53px;
+    padding-right: 200px;
+}
+
+#leftSideBar{
+    height: 100%;
+    min-height: 500px;
+    width: 170px;
+    margin: 0;
+    float: left;
+}
+
+#leftSideBar ul{
+    color: #818181;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 0 10px 0 0px;
+}
+
+#leftSideBar ul li{
+    color: black;
+    list-style: none;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.settings{
+    opacity: 0;
+    color: #818181;
+    margin-left: -20px;
+    padding: 5px 5px 7px 5px;
+    background: #dcdee3;
+}
+
+#leftSideBar ul li:hover .settings{
+    opacity: 1;
+}
+
+#leftSideBar ul li:hover{
+    background: #dcdee3;
+}
+
+#leftSideBar #newsFeed{
+    font-weight: bold;
+}
+
+#leftSideBar #newsFeed img + i{
+    color: #818181;
+    margin-left: 57px;
+    opacity: 1;
+}
+
+#feed{
+    height: 100%;
+    min-height: 500px;
+    width: 495px;
+    float: left;
+    padding: 0px 5px;
+}
+
+article{
+    height: auto;
+    width: 100%;
+    background: #fff;
+    border: 2px #e5e6e9 solid;
+    border-bottom: 1px #d0d1d5 solid;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+#post ul{
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: left;
+    margin: 0 10px;
+    padding: 0;
+    border-bottom: 1px #e5e5e5 solid;
+    width: 90%;
+}
+
+#post ul li{
+    color: #3b5998;
+    padding: 0 8px;
+    margin: 7px 0 4px;
+    font-weight: bold;
+    font-size: 12px;
+    list-style: none;
+    border-right: 1px #e5e5e5 solid;
+    cursor: pointer;
+}
+
+#post ul li img, #leftSideBar ul li img, #rightSideBar #calendar img{
+    width: 18px;
+    height: 18px;
+    padding: 3px 5px 3px 0;
+}
+
+#post ul li:first-child{
+    color: #000;
+}
+
+#post ul li:not(:first-child):hover{
+    background: #f6f7f8;
+    border-radius: 2px;
+}
+
+#post ul li:last-child{
+    border-right: none;
+}
+
+#postMessage{
+    border: none;
+    width: 429px;
+    height: 72px;
+    float: right;
+    font-size: 14px;
+    outline: none;
+}
+
+
+#postPic{
+    padding: 11px 11px 10px 13px;
+}
+
+#postButtons{
+    border-top: 1px #e5e5e5 solid;
+    height: 40px;
+    width: 100%;
+    clear: both;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+#postMessage:focus + #postButtons .hiddenButton{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hiddenButton{
+    height: 46px;
+    width: auto;
+    padding: 0 5px;
+    opacity: 0;
+    color: #b3b7bd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.hiddenButton:hover{
+    background: #f2f2f2;
+}
+
+.button{
+    padding: 1px 0;
+    align-self: flex-end;
+    border: 1px black solid;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    margin: 4px 0;
+    cursor: pointer;
+}
+
+.button p{
+    display: inline;
+    padding: 0 2px;
+}
+
+.button i{
+    display: inline;
+    padding: 0 4px;
+}
+
+#postButton{
+    width: 61px;
+    border-color: #435a8b;
+    color: #ffffff;
+    background-color: #49659f;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+#privacyButton{
+    border-color: #cccccc;
+    width: auto;
+    color: #4e5665;
+    margin-left: 150px;
+    background-color: #fafbfb;
+}
+
+.postHeader{
+    display: flex;
+    justify-content: flex-start;
+    height: 58px;
+    width: 100%;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+.profilePic{
+    width: 40px;
+    height: 40px;
+    padding: 10px 0 5px 10px;
+}
+
+.uts{
+    padding: 10px 10px 5px;
+    margin-left: -140px;
+    line-height: 1.4;
+}
+
+.username{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.username:hover{
+    text-decoration: underline;
+}
+
+.timestamp{
+    margin: 0;
+    padding-top: 3px;
+    font-size: 12px;
+    color: #a9a9a9;
+}
+
+.postCaret{
+    align-self: flex-end;
+    margin: 10px 15px 0 auto;
+    color: #a9a9a9;
+}
+
+.postText p{
+    margin: 0 10px 0 10px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+.postMedia img{
+    width: 470px;
+    height: 100%;
+    padding: 10px;
+}
+
+.lcsButtons{
+    border-bottom: 1px #e5e5e5 solid;
+}
+
+.lcsButtons div{
+    display: inline;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 0 10px;
+    color: #7f7f7f;
+}
+
+.lcsButtons div a{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+.lcsButtons > div > a:hover{
+    text-decoration: underline;
+}
+
+.lcsButtons div i{
+    padding: 0 5px;
+    color: #afb4bd;
+    text-shadow: #7f7f7f -0px -1px;
+}
+
+.postComments{
+    background: #f6f7f8;
+}
+
+.comment{
+    padding: 5px;
+}
+
+.commentPic{
+    width: 25px;
+    height: 25px;
+    padding: 8px 4px;
+}
+
+.commentBox{
+    font-size: 12px;
+    padding: 6px 5px 4px;
+    border: 1px #dcdee3 solid;
+    border-right: 0;
+    width: 370px;
+    outline: none;
+}
+
+.comment a{
+    color: #dcdee3;
+    background: #ffffff;
+    padding: 3px 8px;
+    margin: 1px -5px 0;
+    border-top: 1px #dcdee3 solid;
+    border-bottom: 1px #dcdee3 solid;
+    border-right: 1px #dcdee3 solid;
+}
+
+.comment a:hover{
+    color: #999999;
+}
+
+#rightSideBar{
+    height: 100%;
+    min-height: 500px;
+    width: 280px;
+    margin: 0;
+    z-index: -18;
+    float: left;
+    padding: 0px 5px;
+}
+
+#rightSideBar div a, #rightSideBar p{
+    font-size: 11px;
+    color: #9ca1ac;
+    text-decoration: none;
+    display: inline;
+} 
+
+
+
+#rightSideBar div a:hover{
+    text-decoration: underline;
+}
+
+#rightSideBar .blueText{
+    font-weight: bold;
+    font-size: 12px;
+    color: #3b5998;
+}
+
+#rightSideBar #calendar{
+    margin-left: 10px;
+    border: 0;
+}
+
+#rightSideBar #calendar i{
+    position: relative;
+    display: inline;
+    float: none;
+    padding: 0 2px;
+    z-index: 0;
+}
+
+#rightSideBar div{
+    width: 225px;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px #e9eaed solid;
+}
+
+
+.rightheader{
+    padding: 0;
+    margin: 0 auto 0 -15px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #a0a3aa;
+}
+
+
+#rightSideBar article div i{
+    position:relative;
+    float: right;
+    padding: 8px;
+    font-size: 12px;
+    color: #9ca1ac;
+    display: inline;
+}
+
+#rightSideBar div i{
+    color: #9ca1ac;
+    display: inline;
+    font-size: 12px;
+}
+
+#sponsored #createAd{
+    float: right;
+    font-weight: normal;
+    margin: 4px -5px;
+}
+
+#rightSideBar #rightLinks{
+    margin-left: 3px;
+    line-height: 1;
+}
+
+.ad{
+    padding: 0 10px;
+    margin-left: -25px;
+    width: 255px;
+}
+
+.adHeader{
+    margin: 5px -15px 0;
+    padding-right: 110px;
+}
+
+#groups div{
+    border: 1px #dcdee3 solid;
+    width: 253px;
+    margin: -1px 0 10px -15px;
+}
+
+.groupPic{
+    padding: 0 10px;
+    margin-left: -25px;
+    width: 255px;
+    height: 160px;
+}
+
+#sponsored p.adText{
+    margin: 0 0 5px -15px;
+    display: block;
+    line-height: 1.25;
+}
+
+.groupHeader{
+    padding: 3px 3px 0;
+    float: left;
+    width: 100%;
+}
+
+.groupText{
+    padding: 0 3px;
+}
+
+#groups .joinButton{
+    float: right;
+    width: 50px;
+    margin: -5px 10px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    background: #f6f7f8;
+    color: #4e5665;
+    border-color: #87888e;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+article #languages{
+    color: #3b5998;
+    font-size: 12px;
+    margin: 0;
+    border: 0;
+}
+
+article #languages div{
+    padding: 3px;
+    margin-left: 10px;
+    border: 0;
+    width: 180px;
+    line-height: 1.5;
+}
+
+article #languages div a:first-child{
+    color: #9ca1ac;
+    cursor: default;
+    text-decoration: none;
+}
+
+article #languages div a{
+    color: #3b5998;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#languages #plusButton{
+    font-size: 13px;
+    float: right;
+    width: 34px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background: #f6f7f8;
+    color: #4e5665;
+    border: 1px #87888e solid;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+    margin: -56px -46px 0 0;
+}
+
+#chat{
+    height: 100%;
+    min-height: 500px;
+    width: 200px;
+    border-left: 1px #cccccc solid;
+    margin: 0;
+    float: right;
+    padding: 0;
+    position: fixed;
+    top: 43px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#chat div{
+    position: relative;
+}
+
+.gamesTitle{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.chatGames{
+    font-size: 11px;
+    font-weight: bold;
+    color: #989db3;
+    text-shadow: #ffffff 0px 1px;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.chatMore{
+    font-size: 10px;
+}
+
+.gamesIcons{
+    width: 95%;
+    margin: 0 auto;
+    padding: 8px;
+    border-bottom: 1px #dcdee3 solid;
+    color: #adb2bc;
+}
+
+.gamesIcons img{
+    height: 50px;
+    width: 50px;
+    margin: 0;
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gamesIcons img:hover{
+    border: 1px #cccccc solid;
+    padding: 0;
+}
+
+#chatFriends{
+    height: 67%;
+    padding-top: 6px;
+    overflow: auto;
+}
+
+.friend{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    height: 32px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.friend:hover{
+    background: #dcdee3;
+}
+
+.friendPic{
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+}
+
+.friendName{
+    font-size: 12px;
+    margin: 0;
+    width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.friendStatus{
+    margin: 0 -20px 0 auto;
+    font-size: 10px;
+    color: #9197a3;
+}
+
+.friendStatus.greenDot{
+    color: #009e1d;
+    font-size: 32px;
+}
+
+#chat #chatSearch{
+    background: #f6f7f8;
+    width: 190px;
+    height: 24px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    border-top: 1px #c6cdd7 solid;
+}
+
+#chatSearch i{
+    font-size: 14px;
+    padding: 3px 4px;
+    color: #c6cdd7;
+    cursor: pointer;
+}
+
+#chatSearch i:hover{
+    color: #969797;
+}
+
+#chatSearch input{
+    border: 0;
+    font-weight: normal;
+    font-size: 12px;
+    padding-left: 3px;
+    background-color: #f6f7f8;
+    outline: none;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 1258px) {
+    #chat{
+        display: none;
+    }
+    .main, .mainContent{
+        padding-right: 0px;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

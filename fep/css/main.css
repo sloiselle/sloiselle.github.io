@@ -1,0 +1,1159 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{
+    height: auto;
+    width: 100%;
+    min-width:400px;
+    background: url('img/mk.jpg') 50% 10%;
+}
+
+header{
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    line-height: 1.25px;
+    font-size: 38px;
+    color: #ffffff;
+    text-shadow: 5px 5px black;
+}
+
+.charCard, .charInfo{
+    width: 45%;
+    max-width: 400px;
+    height: 225%;
+    float: left;
+    position: absolute;
+    top: -250%;
+    border: 10px #111210 solid;
+    border-radius: 10px;
+}
+
+
+
+.charAttribute{
+    width: 94%;
+    height: 11%;
+    margin: auto;
+    background: #181917;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 28px;
+    padding-left: 10px;
+    border-left: 5px #2E2F2C solid;
+    border-right: 5px #2E2F2C solid;
+}
+
+.charBlurb{
+    width: 94%;
+    height: 57%;
+    margin: auto;
+    background: #181917;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-left: 5px #2E2F2C solid;
+    border-right: 5px #2E2F2C solid;
+}
+
+.charCard{
+    left: -500px;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: bottom;
+    justify-content: center;
+}
+
+.charInfo{
+    right: -500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: top;
+    align-content: bottom;
+    justify-content: center;
+    background: #2E2F2C;
+    color: #f4f3f5;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+
+.charGif{
+    width: 100%;
+    height: 86%;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex-flow: column reverse-wrap;
+    position: relative;
+}
+
+.charGif div img{
+    width: 50%;
+    height: 50%;
+    padding-right: 5%;
+    position: absolute;
+    bottom: 0;
+}
+
+.charName{
+    height: 15%;
+    width: 100%;
+    font-size: 45px;
+    color: white;
+    margin: auto;
+    text-align: center middle;
+    background: rgba(17,19,17,.9);
+}
+
+footer{
+    width: 100%;
+    /*max-height: 354px;*/
+    height: 196px;
+    border: 1px black solid;
+    background: black;
+    position: fixed;
+    bottom: 0;
+}
+
+.charPicContainer{
+    width: 100%;
+    height: 100%;
+    background: #111210;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.charPicBox{
+    height: 48%;
+    width: 4.8%;
+    border: 1px #111210 solid;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.charPicBox p{
+    background: black;
+    color: white;
+    font-family: arial;
+    font-size: 8px;
+    height: 15%;
+    width: 100%;
+    margin: 0;
+}
+
+.charPic{
+    width: 100%;
+    height: 85%;
+    border: 1px black solid;
+    border-top: none;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    margin: 0;
+}
+
+.charPicBox:hover .charCard{
+    left: 15%;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+
+.charPicBox:hover .charPic{
+    opacity: .8;
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+
+.charPicBox:hover .charInfo{
+    right: 15%;
+    -webkit-transition-duration: 600ms;
+    transition-duration: 600ms;
+}
+
+
+/* ==========================================================================
+   Character Fonts
+   ========================================================================== */
+@font-face{
+    font-family: "CaptainAmerica";
+    src: url("fonts/American_Captain.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "IronMan";
+    src: url("fonts/Stark Bold Italic.otf") format("truetype");
+}
+
+@font-face{
+    font-family: "Spiderman";
+    src: url("fonts/The Amazing Spider-Man.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Hulk";
+    src: url('fonts/hulk.eot');
+    src: local('☺'), url('fonts/hulk.woff') format('woff'), url('fonts/hulk.ttf') format('truetype'), url('fonts/hulk.svg') format('svg');   
+}
+
+@font-face{
+    font-family: "Thor";
+    src: url('fonts/modithorson.ttf') format("truetype");
+}
+
+@font-face{
+    font-family: "TMNT";
+    src: url('fonts/tmnt.ttf');
+}
+
+@font-face{
+    font-family: "Wolverine";
+    src: url('fonts/wolv.ttf');
+}
+
+@font-face{
+    font-family: "Cyclops";
+    src: url('fonts/Cyclops.ttf');
+}
+
+@font-face{
+    font-family: "Juggernaut";
+    src: url('fonts/Jug.ttf');
+}
+
+@font-face{
+    font-family: "Deadpool";
+    src: url('fonts/dead.ttf');
+}
+
+@font-face{
+    font-family: "Thing";
+    src: url('fonts/fantastic.ttf');
+}
+
+@font-face{
+    font-family: "Mario";
+    src: url('fonts/mario.ttf');
+}
+
+@font-face{
+    font-family: "DK";
+    src: url('fonts/dk.ttf');
+}
+
+@font-face{
+    font-family: "Superman";
+    src: url('fonts/Superman.ttf');
+}
+
+@font-face{
+    font-family: "batman";
+    src: url('fonts/batman.ttf');
+}
+
+@font-face{
+    font-family: "green";
+    src: url('fonts/green.ttf');
+}
+
+@font-face{
+    font-family: "aqua";
+    src: url('fonts/aqua.ttf');
+}
+
+@font-face{
+    font-family: "Wonder";
+    src: url('fonts/Wonder.ttf');
+}
+
+@font-face{
+    font-family: "MK";
+    src: url('fonts/mk2.ttf');
+}
+
+@font-face{
+    font-family: "hogan";
+    src: url('fonts/hogan.ttf');
+}
+
+@font-face{
+    font-family: 'StreetFighter';
+    src: url('fonts/sf.eot');
+    src: local('☺'), url('fonts/sf.woff') format('woff'), url('fonts/sf.ttf') format('truetype'), url('fonts/sf.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#captAmericaName{
+    font-family: "CaptainAmerica";
+    text-shadow: 5px 5px #6B81A9;
+}
+
+#ironManName{
+    font-family: "IronMan";
+    font-size: 50px;
+    color: yellow;
+    text-shadow: 3px 3px red;
+}
+
+#hoganName{
+    font-family: "hogan";
+    font-size: 80px;
+    color: red;
+    text-shadow: 3px -3px yellow;
+    line-height: 1;
+}
+
+#spidermanName{
+    font-family: "Spiderman";
+    font-size: 60px;
+    color: red;
+    text-shadow: 3px 3px #424182;
+}
+
+#venomName{
+    font-family: "Spiderman";
+    font-size: 72px;
+    color: white;
+    text-shadow: 3px 3px gray;
+}
+
+#hulkName{
+    font-family: "Hulk";
+    font-size: 80px;
+    line-height: 1.2;
+    color: #62AF3B;
+    text-shadow: 3px 3px #424182;
+}
+
+#thorName{
+    font-family: "Thor";
+    font-size: 60px;
+    color: #EEC900;
+    text-shadow: 3px 3px #C0C0C0;
+}
+
+#mikeName{
+    font-family: "TMNT";
+    font-size: 52px;
+    color: orange;
+    text-shadow: 3px 3px 3px black;
+    background: RGBA(0, 104, 48, .8);
+}
+
+#leoName{
+    font-family: "TMNT";
+    font-size: 55px;
+    color: RGB(61, 143, 255);
+    text-shadow: 3px 3px 3px black;
+    background: RGBA(0, 104, 48, .8);
+}
+
+#donName{
+    font-family: "TMNT";
+    font-size: 55px;
+    color: purple;
+    text-shadow: 3px 3px 3px black;
+    background: RGBA(0, 104, 48, .8);
+}
+
+#raphName{
+    font-family: "TMNT";
+    font-size: 55px;
+    color: red;
+    text-shadow: 3px 3px 3px black;
+    background: RGBA(0, 104, 48, .8);
+}
+
+#wolvName{
+    font-family: "Wolverine";
+    font-size: 55px;
+    color: #E4B434;
+    text-shadow: 1px 3px #5E7F91;
+}
+
+#cyName{
+    font-family: "Cyclops";
+    font-size: 55px;
+    color: #EDF0E9;
+    text-shadow: 8px 5px #9A2447;
+}
+
+#jugName{
+    font-family: "Juggernaut";
+    font-size: 46px;
+    color: #87593C;
+    text-shadow: 2px 2px #6B121F;
+}
+
+.deadName img{
+    width: 100%;
+    height: 100%;
+}
+
+#thingName{
+    font-family: "Thing";
+    font-size: 72px;
+    color: #ffffff;
+    text-shadow: 5px 5px #3F5572;
+}
+
+#marioName{
+    font-family: "Mario";
+    font-size: 58px;
+    color: #ffffff;
+    text-shadow: 4px 4px red;
+}
+
+#luigiName{
+    font-family: "Mario";
+    font-size: 58px;
+    color: #ffffff;
+    text-shadow: 4px 4px green;
+}
+
+#bowserName{
+    font-family: "Mario";
+    font-size: 58px;
+    color: #ffffff;
+    text-shadow: 4px 4px gray;
+}
+
+#sonicName{
+    font-family: "Sonic";
+    font-size: 58px;
+    color: RGB(10, 68, 255);
+    text-shadow: 2px -2px #B4B3AD;
+}
+
+#dkName{
+    font-family: "DK";
+    font-size: 58px;
+    color: #BD0E23;
+    text-shadow: -2px 0px #D7DC45;
+}
+
+#supermanName{
+    font-family: "superman";
+    font-size: 48px;
+    color: #BD0E23;
+    text-shadow: -2px 0px RGB(10, 68, 255);
+}
+
+#batmanName{
+    font-family: "batman";
+    font-size: 58px;
+    color: #5F615B;
+    text-shadow: -5px 5px #E1E345;
+}
+
+#greenName{
+    font-family: "green";
+    font-size: 36px;
+    color: #49A964;
+    text-shadow: -2px 0px #FAFBF6;
+}
+
+#aquaName{
+    font-family: "aqua";
+    font-size: 58px;
+    color: #FFAE00;
+    text-shadow: 1px 1px #00975E;
+}
+
+#wonderName{
+    font-family: "wonder";
+    font-size: 50px;
+    color: #EEC900;
+    text-shadow: -2px 0px #BD0E23;
+}
+
+#ryuName, #kenName, #chunLiName, #blankaName, #zangiefName, #guileName, #akumaName{
+    padding-top: 5%;
+    font-family: "StreetFighter";
+    font-size: 45px;
+    color: #DD1700;
+    text-shadow: -2px 0px white;
+}
+
+#scorpionName, #subzeroName, #reptileName, #liukangName, #barakaName, #goroName, #shaokahnName{
+    font-family: "mk";
+    font-size: 58px;
+    color: yellow;
+    text-shadow: 10px 0px black;
+}
+
+
+/* ==========================================================================
+   Gif Resizing
+   ==========================================================================*/
+#mario div img{
+    width: 40%;
+    height: 40%;
+}
+
+#luigi div img{
+    width: 30%;
+    height: 30%;
+}
+
+#sonic div img{
+    width: 30%;
+    height: 30%;
+    padding-bottom: 10%;
+    padding-right: 15%;
+}  
+
+#dk div img{
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+#thor div img{
+    width: 70%;
+    height: 80%;
+    padding-bottom: 15%;
+    padding-right: 10%;
+}
+
+#cy div img{
+    width: 120%;
+    padding-right: 0;
+    height: 90%;
+}
+
+#spiderman div img{
+    width: 100%;
+    height: 100%;
+}
+
+#ironMan div img{
+    width: 100%;
+    height: 70%;
+}
+
+#captAmerica div img{
+    width: 50%;
+    height: 70%;
+}
+
+#batman div img{
+    width: 50%;
+    height: 70%;
+}
+
+#green div img{
+    padding-top: 10%
+    width: 200%;
+    height: 90%;
+}
+
+#aqua div img{
+    width: 200%;
+    height: 98%;
+}
+
+#superman div img{
+    width: 40%;
+    height: 70%;
+    padding-bottom: 15%;
+    padding-right: 10%;
+}
+
+#hulk div img{
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+}
+
+#wolv div img{
+    width: 90%;
+    height: 90%;
+}
+
+#jug div img{
+    width: 75%;
+    height: 75%;
+}
+
+#goro div img{
+    width: 80%;
+    height: 80%;
+}
+
+#shaokahn div img{
+    width: 80%;
+    height: 80%;
+}
+
+#zangief div img{
+    width: 85%;
+    height: 85%;
+}
+
+#hogan div img{
+    width: 85%;
+    height: 85%;
+    padding-right: 5%;
+}
+
+#thing div img{
+    width: 80%;
+    height: 70%;
+}
+
+#dead .charGif img{
+    width: 60%;
+    height: 70%;
+}
+
+#venom .charGif img{
+    width: 60%;
+    height: 60%;
+}
+
+#bowser .charGif img{
+    width: 70%;
+    height: 70%;
+}
+
+#leo .charGif img, #raph .charGif img{
+    width: 70%;
+    height: 70%;
+}
+
+#don .charGif img{
+    width: 80%;
+    height: 80%;
+}
+
+#mike .charGif img{
+    width: 100%;
+    height: 100%;
+}
+
+#wonder .charGif img{
+    width: 50%;
+    height: 50%;
+}
+
+#chunli .charGif img{
+    width: 50%;
+    height: 50%;
+    padding-right: 20%;
+}
+
+#blanka .charGif img{
+    width: 66%;
+    height: 66%;
+}
+
+#akuma .charGif img{
+    width: 100%;
+    height: 100%;
+}
+
+#guile .charGif img{
+    width: 66%;
+    height: 50%;
+}
+
+#ryu .charGif img{
+    width: 80%;
+    height: 62%;
+}
+
+#ken .charGif img{
+    width: 100%;
+    height: 100%;
+}
+
+#scorpion .charGif img{
+    width: 65%;
+    height: 62%;
+}
+
+#subzero .charGif img{
+    width: 80%;
+    height: 60%;
+}
+
+#reptile .charGif img{
+    width: 50%;
+    height: 58%;
+}
+
+#liukang .charGif img{
+    width: 50%;
+    height: 58%;
+}
+
+#baraka .charGif img{
+    width: 68%;
+    height: 65%;
+}
+
+#scorpion .charGif img{
+    width: 80%;
+    height: 72%;
+}
+
+/* ==========================================================================
+   Character Backgrounds
+   ========================================================================== */
+
+#captAmerica{
+    background: url('img/charBgs/capAmerica.jpg') no-repeat center;
+    background-size: 125% 100%;
+}
+
+#ironMan{
+    background: url('img/charBgs/ironman.jpg') no-repeat top center;
+    background-size: 125% 100%;
+}
+
+#spiderman{
+    background: url('img/charBgs/spiderman.jpg') no-repeat right;
+    background-size: 125% 125%;
+}
+
+#hulk{
+    background: url('img/charBgs/hulk.jpg') no-repeat center;
+    background-size: 125% 100%;
+}
+
+#thor{
+    background: url('img/charBgs/thor.jpg') no-repeat center;
+    background-size: 125% 100%;
+}
+
+#mike{
+    background: url('img/charBgs/mike.jpg') no-repeat center left;
+    background-size: 125% 100%;
+}
+
+#raph{
+    background: url('img/charBgs/raph.jpg') no-repeat top center;
+    background-size: 125% 100%;
+}
+
+#don{
+    background: url('img/charBgs/don.jpg') no-repeat center left;
+    background-size: 125% 100%;
+}
+
+#leo{
+    background: url('img/charBgs/leo.jpg') no-repeat center left;
+    background-size: 125% 100%;
+}
+
+#wolv{
+    background: url('img/charBgs/wolv.jpg') no-repeat center left;
+    background-size: 200% 100%;
+}
+
+#cy{
+    background: url('img/charBgs/cy.jpg') no-repeat top right;
+    background-size: cover;
+}
+
+#jug{
+    background: url('img/charBgs/jug.jpg') no-repeat top right;
+    background-size: cover;
+}
+
+#dead{
+    background: url('img/charBgs/dead.jpg') no-repeat right 80%;
+    background-size: 110% 110%;
+}
+
+#thing{
+    background: url('img/charBgs/thing.jpg') no-repeat top right;
+    background-size: 100% 100%;
+}
+
+#venom{
+    background: url('img/charBgs/venom.jpg') no-repeat top right;
+    background-size: 100% 100%;
+}
+
+#mario{
+    background: url('img/charBgs/mario.jpg') no-repeat 55% 20%;
+    background-size: 300% 150%;
+}
+
+#luigi{
+    background: url('img/charBgs/luigi.jpg') no-repeat 55% 20%;
+    background-size: 300% 150%;
+}
+
+#sonic{
+    background: url('img/charBgs/sonic.jpg') no-repeat top right;
+    background-size: 100% 100%;
+}
+
+#dk{
+    background: url('img/charBgs/dk.jpg') no-repeat top left;
+    background-size: 100% 90%;
+}
+
+#bowser{
+    background: url('img/charBgs/bowser.jpg') no-repeat 55% 20%;
+    background-size: 300% 150%;
+}
+
+#superman{
+    background: url('img/charBgs/superman.jpg') no-repeat 55% 20%;
+    background-size: 300% 150%;
+}
+
+#batman{
+    background: url('img/charBgs/batman.jpg') no-repeat 25% 20%;
+    background-size: 200% 100%;
+}
+
+#green{
+    background: url('img/charBgs/green.jpg') no-repeat top center;
+    background-size: 100% 100%;
+}
+
+#aqua{
+    background: url('img/charBgs/aqua.jpg') no-repeat center 90%;
+    background-size: 200% 120%;
+}
+
+#wonder{
+    background: url('img/charBgs/wonder.jpg') no-repeat top center;
+    background-size: 100% 150%;
+}
+
+#ryu{
+    background: url('img/charBgs/ryu.jpg') no-repeat top left;
+    background-size: cover;
+}
+
+#ken{
+    background: url('img/charBgs/ken.jpg') no-repeat top left;
+    background-size: cover;
+}
+
+#zangief{
+    background: url('img/charBgs/zangief.jpg') no-repeat top center;
+    background-size: 200% 85%;
+}
+
+#chunli{
+    background: url('img/charBgs/chunli.jpg') no-repeat top left;
+    background-size: cover;
+}
+
+#blanka{
+    background: url('img/charBgs/blanka.jpg') no-repeat top left;
+    background-size: cover;
+}
+
+#akuma{
+    background: url('img/charBgs/akuma.png') no-repeat top center;
+    background-size: 200% 85%;
+}
+
+#guile{
+    background: url('img/charBgs/guile.jpg') no-repeat top center;
+    background-size: 200% 85%;
+}
+
+#scorpion{
+    background: url('img/charBgs/scorpion.png') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#subzero{
+    background: url('img/charBgs/subzero.png') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#reptile{
+    background: url('img/charBgs/reptile.png') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#liukang{
+    background: url('img/charBgs/liukang.png') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#baraka{
+    background: url('img/charBgs/baraka.png') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#goro{
+    background: url('img/charBgs/goro.jpg') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#shaokahn{
+    background: url('img/charBgs/shaokahn.jpg') no-repeat top center;
+    background-size: 155% 86%;
+}
+
+#hogan{
+    background: url('img/charBgs/hogan.jpg') no-repeat top center;
+    background-size: 100% 86%;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (max-width: 768px) {
+
+    body{
+        background: green;
+    }
+
+    footer{
+        width: 100%;
+        /*max-height: 354px;*/
+        height: 40%;
+        border: 1px black solid;
+        background: black;
+        position: fixed;
+        bottom: 0;
+    }   
+
+    .charPicBox{
+        height: 18%;
+        width: 12%;
+    }
+
+    header{
+        font-size: 18px;
+    }
+    .charCard{
+        flex-flow: column-reverse nowrap;
+        left: -200%;
+        width: 94%;
+        max-width: none;
+        margin-top: 75%;
+        max-height: 80%;
+        clear: both;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .charInfo{
+        left: -200%;
+        width: 94%;
+        max-width: none;
+        margin-top: 120%;
+        max-height: 50%;
+        clear: both;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .charAttribute, .charBlurb{
+        font-size: 20px;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+        overflow: hidden;
+    }
+
+
+    .charPicBox:hover .charInfo {
+        left: 1.52%;
+        margin-top: 120%;
+    }
+
+    .charPicBox:hover .charCard {
+        left: 1.52%;
+    }
+
+    .deadName img{
+        width: 100%;
+        height: 100%;
+    }
+
+    #captAmericaName, #ironManName, #spidermanName, #venomName, #hulkName, #thorName, #mikeName, #leoName, #donName, #raphName, #wolvName, #cyName, #jugName, #thingName, #marioName, #luigiName, #bowserName, #sonicName, #dkName, #supermanName, #batmanName, #greenName, #aquaName, #wonderName, #ryuName, #kenName, #chunLiName, #blankaName, #zangiefName, #scorpionName, #subzeroName{
+        font-size: 30px;
+    }
+}
