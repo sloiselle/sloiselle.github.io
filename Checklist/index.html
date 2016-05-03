@@ -8,7 +8,11 @@
 <body>
   <div class="lines"></div>
   <h1>Hello <span id="name"></span></h1>
-
+  <h2 id="add-header">Add a Task</h2>
+  <form>
+    <input id="new-thing"/>
+    <button id="new-thing-button" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+  </form>
   <h2 id="fav-header">To Do List</h2>
   <ul id="fav-list">
     <li class="fav-thing">Append 'Done' Button</li>
@@ -19,15 +23,8 @@
     <li class="fav-thing">Change buttons to images</li>
     <li class="fav-thing">Have a beer</li>
   </ul>
-
   <h2 id="completed-header">Completed Tasks</h2>
   <ul id="completed-list"></ul>
-  <h2 id="add-header">Add a Task</h2>
-  <form>
-    <input id="new-thing"/>
-    <button id="new-thing-button" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
-  </form>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
