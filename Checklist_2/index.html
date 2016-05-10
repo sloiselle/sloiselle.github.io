@@ -3,23 +3,32 @@
 <head>
   <title></title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 </head>
 <body>
-  <h1>Hello <span id="name">World</span></h1>
 
+  <div class="lines"></div>
   <h2>Favorite Things</h2>
   <ul id="fav-list">
-    <li class="fav-thing">Dog bites</li>
-    <li class="fav-thing">Bee Stings</li>
-    <li class="fav-thing">Feeling Bad</li>
   </ul>
 
   <form>
     <input id="new-thing" />
-    <input id="new-thing-button" type="submit" value="Create new thing"></submit>
+    <button id="new-thing-button" type="submit"><i class="fa fa-plus-circle" aria-hidden="true"></i></button>
   </form>
 
+
+  <script id="to-do-template" type="text/x-handlebars-template">
+    <li class="">
+      <button class="complete"><i class='fa fa-hand-o-right' aria-hidden='true'></i></button>
+      {{toDo}} 
+      <button class="delete"><i class='fa fa-trash' aria-hidden='true'></i></button>
+    </li>
+  </script>
+
+  <script src="handlebars-v4.0.5.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
+
 </body>
 </html>

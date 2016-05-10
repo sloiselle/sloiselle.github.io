@@ -1,3 +1,116 @@
 #name {
   color: blue;
 }
+
+.inactive {
+	background-color: #E6EDBC;
+	color: #ccc;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#name {
+  color: gray;
+}
+
+#completed-list li{
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+#completed-header, #completed-list{
+	display: none;
+}
+
+body{
+	background-color: #FAF2AD;
+  	margin: 0 auto;
+  	padding: 0;
+	color: gray;
+	font-family: courier, monospace;
+  }
+
+h1, h2{	
+	letter-spacing: -1px;
+	text-align: left;
+}
+
+#add-header{
+	margin-bottom: 5px;
+}
+
+
+ul{
+	color: #555;
+	font-size: 22px;
+	padding: 0 !important;
+	font-family: courier, monospace;
+	border: 1px solid #dedede;
+}
+
+ul li{
+	list-style: none;
+	border-bottom: 1px dotted #ccc;
+	text-indent: 25px;
+	height: auto;
+	padding: 10px;
+	text-transform: capitalize;
+}
+
+button{
+	border: none;
+	background: none;
+	font-size: 20px;
+	outline: none;
+	cursor: pointer;
+}
+
+
+#fav-list li .fa-trash.big-button{
+	font-size: 40px;
+}
+
+#fav-list li .fa-check{
+	color: green;
+}
+
+#fav-list li .fa-trash, #fav-list li .fa-hand-o-right{
+	color: gray;
+}
+
+#fav-list li .fa-times{
+	color: red;
+}
+
+#completed-list li:hover .fa-undo, /*#fav-list li:hover .fa-times*/{
+	display:inline-block;
+	-webkit-transition: all 0.2s;
+	-moz-transition:    all 0.2s;
+	-ms-transition:     all 0.2s;
+    -o-transition:      all 0.2s;
+}
+
+.fa-plus-circle{
+	color: gray;
+}
+
+#new-thing{
+	outline: none;
+	border: none;
+	border-bottom: 2px dashed #dedede;
+	background-color: #FAF2AD;
+	font-family: courier, monospace;
+	font-size: 16px;
+	width: 500px;
+}
+
+.lines {
+	border-left: 1px solid #ffaa9f;
+	border-right: 1px solid #ffaa9f;
+	width: 2px;
+	float: left;
+	height: 1000px;
+	margin: -25px 40px 0 100px;
+}​
