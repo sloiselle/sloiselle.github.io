@@ -1,0 +1,82 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Feedr @ GA</title>
+      <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+
+
+        <!-- Ray's divs -->
+        <div id="overlay">
+        <img src='images/garfield1.jpg'>
+        <div id="overlay-content">Getting articles ...</div>
+        </div>
+
+          <section id="header" class="container">
+            <a href="#"><h1 id="feedr-logo")>Feedr</h1></a>
+            <nav>
+              <ul>
+                <li><a href="#">News Source: <span id="newsSource">All</span></a>
+                  <ul>
+                      <li><a class='newsList' href="#">All</a></li>
+                      <li><a class='newsList' href="#">NPR</a></li>
+                      <li><a class='newsList' href="#">New York Times</a></li>
+                      <li><a class='newsList' href="#">Guardian</a></li>
+                  </ul>
+                </li>
+              </ul>
+                <input class='search' placeholder='&#xf002;'></input>
+            </nav>
+            <div class="clearfix"></div>
+          </section>
+        </header>
+
+        <section id="main" class="container">
+        </section>
+
+        <script id='articleTemplate' type="text/x-handlebars-template">
+          <article class="article">
+            <section class="featuredImage">
+              <img src={{image}} alt="" />
+            </section>
+            <section class="articleContent">
+                <a href="#"><h3 class='title'>{{title}}</h3></a>
+                <h6>{{source}} - <span class='date'>{{date}}</span></h6>
+            </section>
+            <div class="clearfix"></div>
+          </article>
+          <div id="popUp">
+            <a href="#" class="closePopUp">X</a>
+            <div class="container">
+              <h1>{{title}}</h1>
+              <p>
+                {{fullStory}}
+              </p>
+              <a href={{link}} class="popUpAction" target="_blank">Read more from source</a>
+            </div>
+          </div>
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/handlebars-v4.0.5.js"></script>
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
