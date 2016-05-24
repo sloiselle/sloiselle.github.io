@@ -130,7 +130,6 @@ header nav {
 header .search {
   width: 20px;
   height: 20px;
-  position: absolute;
   right: -55px;
   top: 10px;
 }
@@ -217,6 +216,11 @@ nav ul ul li {
 	float:none;
 	display:list-item;
 	position: relative;
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Main Section */
@@ -310,7 +314,7 @@ nav ul ul li {
 
 .search:hover{
   background: #ffffff;
-  color: #cc0020;
+  color: #ffffff;
 }
 
 .search:hover::-webkit-input-placeholder {
