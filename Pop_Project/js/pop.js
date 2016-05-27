@@ -4,16 +4,15 @@ $('#toggle').on('click',function() {
 	var menuHeight = $('.menu').css('height');
 	console.log(menuHeight);
 	if($('.menu').hasClass('menu-open')){
-		$('.container').on({
+		$('.main').on({
 		    'mousewheel': function(e) {
-		    	console.log('menu scroll')
 		        if (e.target.id == 'el') return;
 		        e.preventDefault();
 		        e.stopPropagation();
 	    	}
 		})
 	}
-	$('body').toggleClass('push-toright');
+	$('.main').toggleClass('push-toright');
 })
 
 
