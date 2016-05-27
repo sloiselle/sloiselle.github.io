@@ -12,7 +12,7 @@ $('#toggle').on('click',function() {
 	    	}
 		})
 		$('.main').on({
-		    'swipe': function(e) {
+		    'scrollstart': function(e) {
 		        if (e.target.id == 'el') return;
 		        e.preventDefault();
 		        e.stopPropagation();
