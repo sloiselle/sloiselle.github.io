@@ -11,6 +11,13 @@ $('#toggle').on('click',function() {
 		        e.stopPropagation();
 	    	}
 		})
+		$('.main').on({
+		    'swipe': function(e) {
+		        if (e.target.id == 'el') return;
+		        e.preventDefault();
+		        e.stopPropagation();
+	    	}
+		})
 	}
 	$('.main').toggleClass('push-toright');
 })
