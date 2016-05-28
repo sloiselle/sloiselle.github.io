@@ -176,6 +176,7 @@ Feedr.randomColor = function() {
 
 //Using the data from the feeds to populate the DOM
 Feedr.compileItem = function(story) {
+	debugger;
   var source = $('#articleTemplate').html();
   var template = Handlebars.compile(source);
   return template(story);

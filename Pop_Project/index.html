@@ -4,14 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Blueprint: Slide and Push Menus</title>
+		<title>Pop Figure Collection Tracker</title>
 		<meta name="description" content="Blueprint: Slide and Push Menus" />
 		<meta name="keywords" content="sliding menu, pushing menu, navigation, responsive, menu, css, jquery" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
+		<meta name="Scott Loiselle"/>
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+      	<link rel="stylesheet" href="css/fontawesome.css">
 		<script src="js/modernizr.custom.js"></script>
+		<script src="js/handlebars-v4.0.5.js"></script>
 	</head>
 	<body>
         <nav class="topNav">
@@ -21,8 +22,8 @@
             <div class="one-third">
                 <img class="logo" src='img/Pop_Logo.png'/>
             </div>
-            <div class="one-third popsOwned">
-                <div><span id="popCount">15</span><br/>Pops Owned</div>
+            <div class="one-third popCount">
+                <div><p id="popsOwned">0</p><p>Pops Owned</p></div>
             </div>
         </nav>
         <div class="spacer"></div>
@@ -49,10 +50,39 @@
 			</nav>
 			<div class="main">
 				<h1>Pop Figures Below</h1>
-				<p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p><p>STUFF HERE</p>
+				<ul id='figList'>
+				</ul>
 				<!--Insert pops here-->
 			</div>
 		</div>
+		<script id='figTemplate' type="text/x-handlebars-template">
+			<div class='figure'>
+				<div class='closeButton'>
+					<p>X</p>
+				</div>
+				<div class='figPic'>
+					<img src={{image}} height='auto' width='auto'>
+					<p class='series'>{{series}}</p>
+				</div>
+				<div class='figInfo'>
+					<span class='figNum'>#{{number}} </span>
+					<span class='figName'>{{plainName}}</span>
+					<p class='variant'>{{variant}}</p>
+					<p class='retailer'>{{exclusive}}</p>
+				</div>
+				<div class='haveWantToggles'>
+					<i class="fa fa-heart-o" aria-hidden="true">
+						<p>Want</p>
+					</i><!--fa-heart-->
+					<i class="fa fa-square-o" aria-hidden="true">
+						<p>Have</p></i><!--fa-check-square-->
+					<i class="fa fa-usd" aria-hidden="true">
+						<p>Sell/Trade</p></i><!--fa-usd (change colors)-->
+						<i class="fa fa-star-o" aria-hidden="true">
+						<p>Favorite</p></i><!--fa-star-->
+				</div>
+			</div>
+		</script>
 		<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
 		<script src="js/pop.js"></script>

@@ -33,6 +33,10 @@
     align-items: center;
 }
 
+.popCount{
+  line-height: 5px;
+}
+
 /*Menu Button Toggle*/
 
 #toggle {
@@ -138,7 +142,11 @@
   border-bottom: none;
 }
 
-.menu a:hover, .menu ul:hover, .menu ul.selected{
+/*.menu ul:hover{
+  background: #d9d9d9;
+}*/
+
+.menu ul.selected{
 	background: #8c8c8c;
   color: #ffffff;
 }
@@ -153,6 +161,11 @@
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
+}
+
+.main.noScroll{
+  position: fixed;
+  margin: 0 16px;
 }
 
 .main{
@@ -175,3 +188,166 @@
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+
+
+/*Figures*/
+.figList{
+  margin-left: -40px;
+}
+
+.figure{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  margin-left: -60px;
+  padding-top: 16px;
+  color: #242424;
+  border-bottom: #242424 solid 1px;
+  background: -webkit-linear-gradient(#fdfdfd, #cfcfcf); 
+  background: -o-linear-gradient(#fdfdfd, #cfcfcf); 
+  background: -moz-linear-gradient(#fdfdfd, #cfcfcf); 
+  background: linear-gradient(#fdfdfd, #cfcfcf); 
+  clear: both;
+}
+
+.haveWantToggles{
+  display: none;
+}
+
+.series{
+  font-size: 14px;
+}
+.figPic{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.figPic img{
+  max-height: 100px; 
+  max-width: 150px;
+  margin: 0 auto;
+}
+
+.figNum, .figName{
+  font-weight: 700;
+}
+
+.figInfo{
+  text-align: center;
+  line-height: 10px;
+}
+
+.figure .closeButton{
+  display:none;
+}
+
+.figure.full .closeButton{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 2005;
+}
+
+.figure.full{
+  display: block;
+  position: fixed;
+  flex-flow: column;
+  justify-content: space-around;
+  top: 65px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+.figure.full .figPic, .figure.full .figInfo, 
+.figure.full .haveWantToggles{
+  text-align: center;
+  width: 100%;
+}
+
+.figure.full img{
+  max-height: 210px;
+  max-width: 310px;
+}
+
+.figure.full .haveWantToggles{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  color: #242424;
+}
+
+.haveWantToggles i{
+  font-size: 28px;
+  line-height: 10px;
+  font-family: 'fontawesome';
+}
+
+.haveWantToggles i p{
+  color: #242424;
+  font-size: 18px;
+  text-shadow: none;
+}
+
+.fa-heart-o:hover, .fa-heart{
+  color: #fc4688;
+}
+
+.fa-heart{
+  text-shadow: 1px 1px black,
+                -1px -1px black,
+                -1px 1px black,
+                1px -1px black; 
+}
+
+.fa-square-o:hover, .fa-check-square{
+  color: green;
+}
+
+.fa-check-square{
+  background: #d4d4d4;
+  border-radius: 5px;
+  text-shadow: 1px 1px black,
+                -1px -1px black,
+                -1px 1px black,
+                1px -1px black;
+}
+
+.fa-usd:hover{
+  color: gold;
+}
+
+.fa-usd.toggled{
+  color: gold;
+  text-shadow: 1px 1px black,
+                -1px -1px black,
+                -1px 1px black,
+                1px -1px black;
+}
+
+.fa-star-o:hover, .fa-star{
+  color: yellow;
+}
+
+.fa-star{
+  text-shadow: 1px 1px black,
+                -1px -1px black,
+                -1px 1px black,
+                1px -1px black;
+}
+
+.figure.full .figInfo{
+  padding-top: 20px;
+  border-top: #242424 1px solid;
+}
+
+
+
+
