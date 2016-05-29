@@ -142,6 +142,15 @@
   border-bottom: none;
 }
 
+.menu ul li i{
+  display: none;
+}
+
+.menu ul li i.fa-check{
+  color: green;
+  display: inline;
+}
+
 /*.menu ul:hover{
   background: #d9d9d9;
 }*/
@@ -155,7 +164,19 @@
 	left: 0;
 }
 
+.search{
+  width: 90%;
+  font-size: 20px;
+  border: 1px #242424 solid;
+  border-radius: 5px;
+  margin: 10px;
+}
+
 /* Push classes applied to the body */
+
+body{
+  background: #cfcfcf;
+}
 
 .container {
   white-space: nowrap;
@@ -178,7 +199,7 @@
 }
 
 .spacer{
-  height: 70px;
+  height: 90px;
 }
 /* Transitions */
 
@@ -226,18 +247,21 @@
 }
 
 .figPic img{
-  max-height: 100px; 
-  max-width: 150px;
+  padding-left: 8px;
+  height: auto; 
+  width: 150px;
   margin: 0 auto;
 }
 
 .figNum, .figName{
   font-weight: 700;
+  white-space: pre-wrap;
 }
 
 .figInfo{
   text-align: center;
-  line-height: 10px;
+  line-height: 18px;
+  width: 67%;
 }
 
 .figure .closeButton{
@@ -270,8 +294,10 @@
 }
 
 .figure.full img{
-  max-height: 210px;
-  max-width: 310px;
+  margin-top: 30px;
+  height: 40vh;
+  width: auto;
+  max-width: 95%;
 }
 
 .figure.full .haveWantToggles{
@@ -292,8 +318,9 @@
 
 .haveWantToggles i p{
   color: #242424;
-  font-size: 18px;
+  font-size: 14px;
   text-shadow: none;
+  font-family: Helvetica;
 }
 
 .fa-heart-o:hover, .fa-heart{

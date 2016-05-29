@@ -1,0 +1,22 @@
+{
+  "name": "pop_tracker",
+  "version": "0.0.5",
+  "description": "A tracker for Pop Figure collections",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sloiselle/sloiselle.github.io.git"
+  },
+  "keywords": [
+    "pop"
+  ],
+  "author": "Scott Loiselle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sloiselle/sloiselle.github.io/issues"
+  },
+  "homepage": "https://github.com/sloiselle/sloiselle.github.io#readme"
+}

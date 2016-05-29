@@ -16,6 +16,12 @@ $('.menu ul').on('click', function() {
 	$(this).toggleClass('selected');
 })
 
+$('.menu ul li').on('click', function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+})
+
+
 $('ul').on('click', '.figure > *', function(){
 	if($(this).hasClass('closeButton')){
 		$(this).parent().removeClass('full');
@@ -124,8 +130,22 @@ var initialize = function (figures,list) {
 	})
 };
 
+$('.search').on('keyup',function() {
+        var search = $('.search').val().toUpperCase(); //Sets the search value to UpperCase always
+        var figName = '';
+    $('.figName').each( function(){
+        figName = $(this).text().toUpperCase(); //Sets each title to UpperCase always
+        if(figName.startsWith(search) === false){
+            $(this).parent().parent().hide();
+        } else{
+            $(this).parent().parent().show();
+        }
+    })
+});
 
-
+$('.menu ul li').on('click', function(){
+	$(this).children().toggleClass('fa-check')
+})
 
 
 var popList = [
@@ -1951,7 +1971,7 @@ var popList = [
     "subSeries": "The Flintstones",
     "Size": "3 inch",
     "exclusive": "Gemini",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/animation-series/olympus-digital-camera-9/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/03/fabd.jpg"
   },
   {
     "number": "2-PACK",
@@ -1963,7 +1983,7 @@ var popList = [
     "subSeries": "The Flintstones",
     "Size": "3 inch",
     "exclusive": "SDCC 2014",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/animation-series/sdcc6-2/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/03/sdcc6.jpg"
   },
   {
     "number": "2-PACK",
@@ -1975,7 +1995,7 @@ var popList = [
     "subSeries": "The Flintstones",
     "Size": "3 inch",
     "exclusive": "SDCC 2014",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/animation-series/sdcc5-2/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/03/sdcc5.jpg"
   },
   {
     "number": "2-PACK",
@@ -1987,7 +2007,7 @@ var popList = [
     "subSeries": "The Flintstones",
     "Size": "3 inch",
     "exclusive": "SDCC 2014",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/animation-series/sdcc4-2/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/03/sdcc4.jpg"
   },
   {
     "number": "2-PACK",
@@ -1999,7 +2019,7 @@ var popList = [
     "subSeries": "Futurama",
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/animation-series/futurama2pack/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/03/futurama2pack.jpg"
   },
   {
     "number": 1,
@@ -2083,7 +2103,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/cwo/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/05/cwo.png"
   },
   {
     "number": 4,
@@ -2095,7 +2115,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/glowchasecwo/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/05/glowchaseCWO.jpg"
   },
   {
     "number": 1,
@@ -2111,162 +2131,6 @@ var popList = [
   },
   {
     "number": 1,
-    "variant": "The New 52",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'The New 52' Batman [Previews]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Previews",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanMetallicChase.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Yellow Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Yellow Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanBlueColorway480.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Purple Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Purple Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanBlueMetallic480.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Orange Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Orange Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanYellowCorrection.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Blue Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Blue Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanYellowErrorMetallic.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Pink Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Pink Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanFlashPoint.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Green Rainbow",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Green Rainbow' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/batmanbobble.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Silver",
-    "plainName": "Batman",
-    "suffix": "LE",
-    "name": "'Silver' Batman (LE) [Hot Topic]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Hot Topic",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/bhbatchase.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Retro",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Retro' Batman [Entertainment Earth]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Entertainment Earth",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanPreviewsExclusiveNew52.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Michael Keaton",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Michael Keaton' Batman",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2015/01/75thbats.jpg"
-  },
-  {
-    "number": 1,
-    "variant": 0,
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "Batman",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "9 inch",
-    "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2015/02/purple.jpg"
-  },
-  {
-    "number": 1,
-    "variant": 0,
-    "plainName": "Batman",
-    "suffix": "Chase",
-    "name": "Batman (Chase)",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "9 inch",
-    "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/orangeb.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "GITD Retro Blue",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'GITD Retro Blue' Batman [Solutions2Go Game Bundle]",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": "Solutions2Go Game Bundle",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/blue.jpg"
-  },
-  {
-    "number": 1,
     "variant": "Metallic",
     "plainName": "Batman",
     "suffix": "Chase",
@@ -2275,19 +2139,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/pink.jpg"
-  },
-  {
-    "number": 1,
-    "variant": "Gold Michael Keaton",
-    "plainName": "Batman",
-    "suffix": 0,
-    "name": "'Gold Michael Keaton' Batman",
-    "series": "DC",
-    "subSeries": 0,
-    "Size": "3 inch",
-    "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/green.jpg"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanMetallicChase.jpg"
   },
   {
     "number": 1,
@@ -2299,7 +2151,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": "SDCC 2010",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/batman108.jpg"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanBlueColorway480.jpg"
   },
   {
     "number": 1,
@@ -2311,7 +2163,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": "SDCC 2010",
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/retrobatmanee.jpg"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanBlueMetallic480.jpg"
   },
   {
     "number": 1,
@@ -2323,7 +2175,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/gamestopbatman.jpg"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanYellowCorrection.jpg"
   },
   {
     "number": 1,
@@ -2335,7 +2187,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": 0,
-    "image": "http://popvinyls.com/wp-content/uploads/2014/02/goldbatman.jpg"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanYellowErrorMetallic.jpg"
   },
   {
     "number": 1,
@@ -2347,7 +2199,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": "NYCC 2011",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/funko-pop-heroes-series/9batman/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanFlashPoint.jpg"
   },
   {
     "number": 1,
@@ -2359,7 +2211,7 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": "Target",
-    "image": "http://popvinyls.com/funko-pop-vinyls-series/funko-pop-heroes-series/chase9batman/"
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/batmanbobble.jpg"
   },
   {
     "number": 1,
@@ -2371,6 +2223,174 @@ var popList = [
     "subSeries": 0,
     "Size": "3 inch",
     "exclusive": "Target",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/bhbatchase.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "The New 52",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'The New 52' Batman [Previews]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Previews",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanPreviewsExclusiveNew52.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Yellow Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Yellow Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2015/01/75thbats.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Purple Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Purple Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2015/02/purple.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Orange Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Orange Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/orangeb.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Blue Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Blue Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/blue.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Pink Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Pink Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/pink.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Green Rainbow",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Green Rainbow' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/green.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Silver",
+    "plainName": "Batman",
+    "suffix": "LE",
+    "name": "'Silver' Batman (LE) [Hot Topic]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Hot Topic",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/batman108.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Retro",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Retro' Batman [Entertainment Earth]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Entertainment Earth",
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/retrobatmanee.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Michael Keaton",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Michael Keaton' Batman",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": 0,
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/gamestopbatman.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "Gold Michael Keaton",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'Gold Michael Keaton' Batman",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": 0,
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/goldbatman.jpg"
+  },
+  {
+    "number": 1,
+    "variant": 0,
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "Batman",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "9 inch",
+    "exclusive": 0,
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/9batman.jpg"
+  },
+  {
+    "number": 1,
+    "variant": 0,
+    "plainName": "Batman",
+    "suffix": "Chase",
+    "name": "Batman (Chase)",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "9 inch",
+    "exclusive": 0,
+    "image": "http://popvinyls.com/wp-content/uploads/2014/02/chase9batman.jpg"
+  },
+  {
+    "number": 1,
+    "variant": "GITD Retro Blue",
+    "plainName": "Batman",
+    "suffix": 0,
+    "name": "'GITD Retro Blue' Batman [Solutions2Go Game Bundle]",
+    "series": "DC",
+    "subSeries": 0,
+    "Size": "3 inch",
+    "exclusive": "Solutions2Go Game Bundle",
     "image": "http://popvinyls.com/wp-content/uploads/2014/02/01-BatmanSolutions2Go.jpg"
   },
   {
