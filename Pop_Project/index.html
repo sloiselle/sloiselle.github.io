@@ -13,6 +13,8 @@
       	<link rel="stylesheet" href="css/fontawesome.css">
 		<script src="js/modernizr.custom.js"></script>
 		<script src="js/handlebars-v4.0.5.js"></script>
+		<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+        <script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
 	</head>
 	<body>
         <nav class="topNav">
@@ -61,7 +63,7 @@
 					<p>X</p>
 				</div>
 				<div class='figPic'>
-					<img src={{image}} height='auto' width='auto'>
+					<img class='lazy' src='img/loader.gif' data-original={{image}} height='auto' width='auto'>
 					<p class='series'>{{series}}</p>
 				</div>
 				<div class='figInfo'>
@@ -83,9 +85,7 @@
 				</div>
 			</div>
 		</script>
-		<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
-        <script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
-		<script src="jquery.lazyload.js"></script>
+		<script src="js/lazyload.js"></script>
 		<script src="js/pop.js"></script>
 	</body>
 </html>

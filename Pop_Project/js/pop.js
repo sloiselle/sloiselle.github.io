@@ -130,6 +130,12 @@ var initialize = function (figures,list) {
 	})
 };
 
+$(function() {
+    $("img.lazy").lazyload({
+    	container: $("#figList")
+    });
+});
+
 $('.search').on('keyup',function() {
         var search = $('.search').val().toUpperCase(); //Sets the search value to UpperCase always
         var figName = '';
